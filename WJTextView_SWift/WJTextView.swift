@@ -31,4 +31,7 @@ class WJTextView: UITextView {
         _editing = false
         setNeedsDisplay()
     }
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self);
+    }
 }
